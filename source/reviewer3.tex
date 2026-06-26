@@ -1,0 +1,94 @@
+\section{Comment 3.1}
+\begin{reviewercomment}
+\textbf{[Placeholder summary comment.]} The topic is timely and relevant. Strengths include: (1)~addressing an important practical challenge; (2)~a promising use of foundation models; (3)~competitive experimental results on standard benchmarks.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\textbf{[Placeholder author response.]} We thank the reviewer for the positive assessment and for highlighting the strengths of our work. We hope the revisions described below address the remaining concerns.
+\end{authorresponse}
+\RRSectionBibliography
+\end{refsegment}
+
+\section{Comment 3.2}
+\begin{reviewercomment}
+\textbf{[Placeholder reviewer comment.]} The central claim of the paper is not sufficiently grounded in the literature review. Related work should discuss [topic] more systematically.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\textbf{[Placeholder author response.]} Thank you for this observation. We substantially revised Section~2 to define our terminology, contrast prior theory-dependent approaches with theory-agnostic goals, and cite representative recent work \cite{placeholder-survey,placeholder-method}.
+\end{authorresponse}
+
+\begin{authorchange}
+\TitleChangeSection{Section II: Related Work}
+
+\textbf{[Placeholder manuscript excerpt.]} We added a dedicated subsection discussing prior approaches from both algorithmic and conceptual perspectives. We clarify how our contribution differs from single-dataset or single-framework methods.
+
+\ReferToManuscript
+\end{authorchange}
+\RRSectionBibliography
+\end{refsegment}
+
+\section{Comment 3.3}
+\begin{reviewercomment}
+\textbf{[Placeholder reviewer comment.]} The literature review cites several prior studies without explaining how they relate to or motivate the proposed framework. This may confuse readers about the paper's positioning.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\textbf{[Placeholder author response.]} We revised Section~2 to explicitly connect each cited family of methods to a limitation that motivates our design: fragmented datasets, theory dependence, deployment cost, or data leakage. We do not dismiss prior work; we use it to motivate our encoder-first, modular design described in Section~3.
+\end{authorresponse}
+
+\begin{authorchange}
+\TitleChangeSection{Section II.B: Prior Work}
+
+\textbf{[Placeholder manuscript excerpt.]} Each paragraph now ends with a sentence linking the cited work to a gap addressed by our method.
+
+\SplitChangeSection
+
+\TitleChangeSection{Section II.C: Positioning}
+
+\textbf{[Placeholder manuscript excerpt.]} We state clearly that our contribution is methodological and empirical validation under heterogeneous settings, not a new psychological theory.
+\end{authorchange}
+\RRSectionBibliography
+\end{refsegment}
+
+\section{Comments 3.4 \& 3.5}
+\begin{reviewercomment}
+\noindent\textbf{Comment 3.4.}
+\textbf{[Placeholder.]} The rationale for a key design choice appears in the wrong section (literature review instead of methodology). Please relocate and expand.
+
+\noindent\textbf{Comment 3.5.}
+\textbf{[Placeholder.]} The paper's contributions are listed inside the related work section. Move them to the Introduction for clarity.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\noindent\textbf{Regarding Comment 3.4.}
+\textbf{[Placeholder author response.]} We agree. The full motivation now appears in Section~III.B, where implementation details (prompt design, pipeline stages, weight mapping) are also provided.
+
+\SplitChangeSection
+
+\noindent\textbf{Regarding Comment 3.5.}
+\textbf{[Placeholder author response.]} We relocated the contribution list to the end of the Introduction, before the methodology section, per standard journal structure.
+\end{authorresponse}
+
+\begin{authorchange}
+\TitleChangeSection{Section I: Introduction (Contributions)}
+
+\textbf{[Placeholder manuscript excerpt.]} In this study, we make the following contributions:
+\begin{enumerate}
+    \item \textbf{[Contribution 1 placeholder.]} Brief description of first contribution.
+    \item \textbf{[Contribution 2 placeholder.]} Brief description of second contribution.
+    \item \textbf{[Contribution 3 placeholder.]} Brief description of third contribution.
+\end{enumerate}
+
+\SplitChangeSection
+
+\TitleChangeSection{Section III.B: Design Rationale}
+
+\textbf{[Placeholder manuscript excerpt.]} We argue that auxiliary modules should evaluate data quality rather than serve as primary predictors, reducing leakage risk while leveraging external knowledge.
+\end{authorchange}
+\RRSectionBibliography
+\end{refsegment}

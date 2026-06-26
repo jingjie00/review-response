@@ -1,0 +1,6 @@
+% Keys in the same order as \bibcite{...} blocks in your manuscript .aux
+% (after latexmk -pdf manuscript.tex). Append rebuttal-only keys after
+% manuscript keys so defernumbers stays aligned with the paper bibliography.
+\providecommand*{\RRApplyPaperCiteOrder}{%
+  \nocite{placeholder-survey,placeholder-method,placeholder-dataset,placeholder-baseline}%
+}

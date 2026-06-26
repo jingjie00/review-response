@@ -1,0 +1,92 @@
+\section{Comment 1.1}
+\begin{reviewercomment}
+\textbf{[Placeholder reviewer comment.]} The manuscript does not sufficiently discuss the computational cost of the proposed method. Please add an analysis comparing runtime, memory, or API usage against baselines.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\textbf{[Placeholder author response.]} Thank you for raising this concern. We have added a new subsection and Fig.~\ref{fig:cost} comparing computational cost across methods.
+\end{authorresponse}
+
+\begin{authorchange}
+\TitleChangeSection{Section III.A: Computational Analysis}
+
+\textbf{[Placeholder manuscript excerpt.]} We compare training time, inference latency, and overall cost under two settings. The proposed method achieves lower overhead than prior approaches while maintaining comparable accuracy.
+
+\begin{figure*}[1]
+    \centering
+    \includegraphics[width=0.75\linewidth]{img/fig-A.pdf}
+    \caption{Placeholder figure A --- replace with your cost or runtime comparison.}
+    \label{fig:cost}
+\end{figure*}
+\end{authorchange}
+\RRSectionBibliography
+\end{refsegment}
+
+\section{Comments 1.2 \& 1.3}
+\begin{reviewercomment}
+\noindent\textbf{Comment 1.2.}
+\textbf{[Placeholder.]} The experimental setup for dataset splitting is unclear. Please describe train/validation/test splits and any stratification.
+
+\noindent\textbf{Comment 1.3.}
+\textbf{[Placeholder.]} Reproducibility details (hyperparameters, random seeds, hardware) should be reported more fully.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\noindent\textbf{Regarding Comment 1.2.}
+\textbf{[Placeholder author response.]} We have expanded Section~IV with a table summarizing dataset splits and stratification procedures \cite{placeholder-dataset}.
+
+\SplitChangeSection
+
+\noindent\textbf{Regarding Comment 1.3.}
+\textbf{[Placeholder author response.]} We added implementation details, hyperparameter settings, and hardware specifications to the revised manuscript. Code will be released upon acceptance.
+\end{authorresponse}
+
+\begin{authorchange}
+\TitleChangeSection{Section IV.A: Experimental Setup}
+
+\textbf{[Placeholder manuscript excerpt.]} Table~\ref{tab:splits} summarizes the datasets and split sizes. All experiments use fixed random seeds and the same hardware configuration.
+
+\begin{table*}[2]
+    \centering
+    \caption{Placeholder dataset summary --- replace with your data.}
+    \begin{tabularx}{\linewidth}{|l|c|X|}
+        \hline
+        \textbf{Dataset} & \textbf{Split (train / val / test)} & \textbf{Description} \\
+        \hline
+        Dataset A & 1000 / 200 / 200 & Placeholder description. \\
+        \hline
+        Dataset B & 5000 / 1000 / 1000 & Placeholder description. \\
+        \hline
+    \end{tabularx}
+    \label{tab:splits}
+\end{table*}
+\end{authorchange}
+\RRSectionBibliography
+\end{refsegment}
+
+\section{Comment 1.4}
+\begin{reviewercomment}
+\textbf{[Placeholder reviewer comment.]} The paper should compare against additional baselines from recent literature to strengthen the empirical evaluation.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\textbf{[Placeholder author response.]} We agree and have added comparisons to two recent methods \cite{placeholder-baseline,placeholder-method}. Results are summarized in Fig.~\ref{fig:baseline}.
+\end{authorresponse}
+
+\begin{authorchange}
+\TitleChangeSection{Section IV.B: Baseline Comparison}
+
+\textbf{[Placeholder manuscript excerpt.]} Fig.~\ref{fig:baseline} shows balanced accuracy across methods. Our approach remains competitive or superior on most metrics.
+
+\begin{figure*}[3]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/fig-B.pdf}
+    \caption{Placeholder figure B --- replace with your baseline comparison chart.}
+    \label{fig:baseline}
+\end{figure*}
+\end{authorchange}
+\RRSectionBibliography
+\end{refsegment}

@@ -1,0 +1,57 @@
+% Build: latexmk -pdf main.tex  (runs biber automatically for per-section bibliographies)
+% Optional manuscript cross-refs: compile your paper first, then add
+%   \RRExternalManuscript{manuscript}  (reads manuscript.aux)
+% Citation order: edit rr_paper_cite_order.tex to match your paper .bbl order.
+\PassOptionsToPackage{final}{graphicx}
+\documentclass[11pt,oneside]{book}
+
+\usepackage{reviewerresponse}
+\usepackage{pdfpages}
+\input{rr_paper_cite_order}
+
+\renewcommand*{\RRManuscriptTitle}{Your Manuscript Title Goes Here}
+\renewcommand*{\RRManuscriptMeta}{JOURNAL-YYYY-NN-NNNN (optional submission ID)}
+\renewcommand*{\RRAuthorBlock}{https://www.overleaf.com/read/pymfgmnhtmbq#e5f83a}
+
+\RRApplyPaperCiteOrder
+
+\begin{document}
+\RRPrimeDeferredNumberingFromPaper
+
+\RRTitlePage
+
+\frontmatter
+\tableofcontents
+\newpage
+
+\mainmatter
+
+\chapter*{Cover letter}
+\addcontentsline{toc}{chapter}{Cover letter}
+\input{coverletter}
+
+% Associate-editor block: same envs as reviewers; page header uses \RRChapterRole.
+% \renewcommand*{\RRChapterRole}{Associate Editor}
+% \chapter{Associate Editor}
+% \input{associateeditor}
+% \renewcommand*{\RRChapterRole}{Reviewer}
+
+\chapter{Reviewer 1}
+\input{reviewer1}
+
+\chapter{Reviewer 2}
+\input{reviewer2}
+
+\chapter{Reviewer 3}
+\input{reviewer3}
+
+\cleardoublepage
+\chapter*{Highlighted Changes in the Revised Manuscript}
+\addcontentsline{toc}{chapter}{Tracked Changes / Highlighted Changes (revised manuscript)}
+\vspace{2em}
+\noindent{\small\textit{See next page. Replace \texttt{tracked-changes-guide.pdf} with your \texttt{diff.pdf} from \url{https://latexdiff.web.app/} (original deletions and revisions are colour-coded).}}
+
+\newpage
+\includepdf[pages=-]{tracked-changes-guide.pdf}
+
+\end{document}

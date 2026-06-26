@@ -1,0 +1,125 @@
+\section{Comment 2.1}
+\begin{reviewercomment}
+\textbf{[Placeholder summary comment.]} This paper proposes a novel framework for [task]. The motivation is clear, the methodology is interesting, and the experiments on standard benchmarks suggest the approach is effective. I summarize the main points above and raise detailed questions below.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\textbf{[Placeholder author response.]} We thank the reviewer for this accurate summary of our work. We address the detailed technical points in the comments below.
+\end{authorresponse}
+\RRSectionBibliography
+\end{refsegment}
+
+\section{Comment 2.2}
+\begin{reviewercomment}
+\textbf{[Placeholder reviewer comment.]} The theoretical justification for the core alignment mechanism is weak. Please temper claims or provide stronger empirical support.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\textbf{[Placeholder author response.]} We agree that we do not claim formal theoretical guarantees. We revised the manuscript to describe alignment as improving cross-domain \emph{representation generalization} rather than preserving intrinsic semantic structure. We added ablations in Fig.~\ref{fig:ablation} and expanded the discussion in Section~III.B.
+\end{authorresponse}
+
+\begin{authorchange}
+\TitleChangeSection{Section III.B: Method}
+
+\textbf{[Placeholder manuscript excerpt.]} Fig.~\ref{fig:framework} illustrates the proposed architecture. We now explicitly state that harmonization improves empirical generalization without claiming construct equivalence.
+
+\begin{figure*}[4]
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/fig-C.pdf}
+    \caption{Placeholder figure C --- replace with your method diagram.}
+    \label{fig:framework}
+\end{figure*}
+
+\SplitChangeSection
+
+\textbf{[Placeholder ablation text.]} Component-wise ablation results are shown in Fig.~\ref{fig:ablation}.
+
+\begin{figure*}[5]
+    \centering
+    \includegraphics[width=0.75\linewidth]{img/fig-D.pdf}
+    \caption{Placeholder figure D --- replace with your ablation results.}
+    \label{fig:ablation}
+\end{figure*}
+\end{authorchange}
+\RRSectionBibliography
+\end{refsegment}
+
+\section{Comments 2.3 \& 2.4}
+\begin{reviewercomment}
+\noindent\textbf{Comment 2.3.}
+\textbf{[Placeholder.]} More backbone models should be evaluated for the auxiliary module (e.g.\ different LLM families).
+
+\noindent\textbf{Comment 2.4.}
+\textbf{[Placeholder.]} Parameter-efficient fine-tuning baselines (e.g.\ LoRA, adapters) should be included where applicable.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\noindent\textbf{Regarding Comment 2.3.}
+\textbf{[Placeholder author response.]} We extended experiments to three additional backbones; see Fig.~\ref{fig:llm-compare}.
+
+\SplitChangeSection
+
+\noindent\textbf{Regarding Comment 2.4.}
+\textbf{[Placeholder author response.]} We added QLoRA fine-tuning as a supplementary baseline \cite{placeholder-method}. Gains were modest relative to cost; we discuss this in Section~IV.C.
+\end{authorresponse}
+
+\begin{authorchange}
+\TitleChangeSection{Section IV.C: Extended Model Comparison}
+
+\textbf{[Placeholder manuscript excerpt.]} Fig.~\ref{fig:llm-compare} compares performance under varying hyperparameter settings across model families.
+
+\begin{figure*}[6]
+    \centering
+    \subfigure[Dataset A]{
+        \includegraphics[width=0.48\linewidth]{img/fig-E.pdf}
+        \label{fig:llm-a}
+    }
+    \hfill
+    \subfigure[Dataset B]{
+        \includegraphics[width=0.48\linewidth]{img/fig-F.pdf}
+        \label{fig:llm-b}
+    }
+    \caption{Placeholder figures E \& F (side-by-side subfigures) --- replace with your multi-model comparison.}
+    \label{fig:llm-compare}
+\end{figure*}
+\end{authorchange}
+\RRSectionBibliography
+\end{refsegment}
+
+\section{Comment 2.5}
+\begin{reviewercomment}
+\textbf{[Placeholder reviewer comment.]} Sensitivity analysis for the joint loss and its hyperparameters is insufficient. Please report ablations in more detail.
+\end{reviewercomment}
+
+\begin{refsegment}
+\begin{authorresponse}
+\textbf{[Placeholder author response.]} We restructured Section~IV to separate baseline establishment, component ablation, and hyperparameter sensitivity. Table~\ref{tab:hyperparams} lists the configurations; full results appear in the revised manuscript.
+\end{authorresponse}
+
+\begin{authorchange}
+\TitleChangeSection{Section IV.D: Hyperparameter Sensitivity}
+
+\textbf{[Placeholder manuscript excerpt.]} We evaluate a discrete grid over key coefficients. The weight on ambiguous samples has negligible effect; the weight on rejected samples is more dataset-dependent.
+
+\begin{table*}[7]
+    \centering
+    \caption{Placeholder hyperparameter configurations --- replace with your settings.}
+    \begin{tabularx}{\linewidth}{|l|X|}
+        \hline
+        \textbf{Notation} & \textbf{Description} \\
+        \hline
+        $\alpha$ & Placeholder coefficient for term A. \\
+        \hline
+        $\beta$ & Placeholder coefficient for term B. \\
+        \hline
+        $\gamma$ & Placeholder coefficient for term C. \\
+        \hline
+    \end{tabularx}
+    \label{tab:hyperparams}
+\end{table*}
+\end{authorchange}
+\RRSectionBibliography
+\end{refsegment}

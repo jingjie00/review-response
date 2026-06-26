@@ -1,0 +1,53 @@
+# LaTeX build / toolchains
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+*.dvi
+*.xdv
+*-converted-to.*
+*.bbl
+*.bcf
+*-blx.aux
+*.run.xml
+*.blg
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+*.alg
+*.loa
+
+# Biber errors / backups
+*-SAVE-ERROR
+
+# Beamer
+*.nav
+*.pre
+*.snm
+*.vrb
+
+# Minted / pythontex
+*-minted*
+*.pytxcode
+pythontex-files-*
+
+# Editors
+*~
+*.swp
+*.swo
+.dropbox
+.DS_Store
+
+# Optional: uncomment to stop tracking built PDFs
+# *.pdf

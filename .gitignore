@@ -1,0 +1,63 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+.dropbox
+
+# Editors
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+*.code-workspace
+
+# Environment / secrets
+.env
+.env.*
+*.local
+
+# Firebase
+firebase-debug.log
+firebase-debug.*.log
+.firebase/
+
+# LaTeX build artifacts (source/)
+source/*.aux
+source/*.lof
+source/*.log
+source/*.lot
+source/*.fls
+source/*.out
+source/*.toc
+source/*.fmt
+source/*.fot
+source/*.cb
+source/*.cb2
+source/.*.lb
+source/*.dvi
+source/*.xdv
+source/*-converted-to.*
+source/*.bbl
+source/*.bcf
+source/*-blx.aux
+source/*.run.xml
+source/*.blg
+source/*.fdb_latexmk
+source/*.synctex
+source/*.synctex(busy)
+source/*.synctex.gz
+source/*.synctex.gz(busy)
+source/*.pdfsync
+source/*.alg
+source/*.loa
+source/*-SAVE-ERROR
+source/*.nav
+source/*.pre
+source/*.snm
+source/*.vrb
+source/*-minted*
+source/*.pytxcode
+source/pythontex-files-*
+
+# Optional: uncomment to stop tracking built PDFs in source/
+# source/*.pdf
