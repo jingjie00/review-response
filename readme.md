@@ -2,7 +2,8 @@
 
 A LaTeX template for writing structured **reviewer response letters** — the kind journals ask for after a revise-and-resubmit. Comments, author replies, and revised manuscript excerpts live in one document with consistent formatting, per-section bibliographies, and citation numbers aligned to your paper.
 
-**Live demo:** open [`ui/index.html`](ui/index.html) in a browser, or browse the static site in [`ui/`](ui/).
+**Live site:** https://reviewer-response.web.app  
+**Local demo:** open [`ui/index.html`](ui/index.html) in a browser.
 
 **Author:** [Tan Jing Jie](https://jingjietan.com/)
 
@@ -53,7 +54,9 @@ reviewer-response/
 │   ├── references.bib
 │   ├── rr_paper_cite_order.tex
 │   └── img/                 # Figure PDFs for authorchange blocks
-└── ui/                      # Static promo / documentation site
+└── ui/                      # Static promo site (Firebase Hosting)
+    ├── firebase.json
+    ├── .firebaserc          # project: reviewer-response
     ├── index.html
     ├── sample.pdf           # Example compiled output
     └── …
@@ -156,12 +159,22 @@ Common issues:
 
 Build artifacts (`*.aux`, `*.log`, `*.bbl`, …) are listed in [`.gitignore`](.gitignore).
 
+### Redeploy the promo site
+
+```bash
+cd ui
+firebase deploy --only hosting
+```
+
+Project: `reviewer-response` (see `ui/.firebaserc`).
+
 ---
 
 ## Links
 
 | Resource | URL |
 |----------|-----|
+| Live site | https://reviewer-response.web.app |
 | GitHub | https://github.com/jingjie00/reviewer-response |
 | Overleaf template | https://www.overleaf.com/read/pymfgmnhtmbq#e5f83a |
 | LaTeX Different (latexdiff) | https://latexdiff.web.app/ |
